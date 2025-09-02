@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Fagskolen Viken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #002855;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #00468b;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .hero {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6f/Kuben_vgs_front.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+
+    footer {
+      background-color: #002855;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fagskolen Viken</h1>
+  </header>
+
+  <nav>
+    <a href="#om">Om oss</a>
+    <a href="#studier">Studieretninger</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Velkommen til Fagskolen Viken</h1>
+  </div>
+
+  <main>
+    <section id="om">
+      <h2>Om skolen</h2>
+      <p>Fagskolen Viken tilbyr praksisnære utdanninger innen teknologi, helse og ledelse. Vi jobber tett med næringslivet for å tilby relevante og fremtidsrettede studier.</p>
+    </section>
+
+    <section id="studier">
+      <h2>Studieretninger</h2>
+      <ul>
+        <li>Informasjonsteknologi og nettverk</li>
+        <li>Helseadministrasjon</li>
+        <li>Elkraft og automasjon</li>
+        <li>Bygg og anlegg</li>
+        <li>Logistikk og prosess</li>
+      </ul>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt oss</h2>
+      <p>Har du spørsmål om skolen eller opptak? Ikke nøl med å ta kontakt.</p>
+      <p>E-post: <a href="mailto:post@fagskolenviken.no">post@fagskolenviken.no</a></p>
+      <p>Telefon: 32 86 78 00</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Fagskolen Viken – Alle rettigheter reservert
+  </footer>
+
+</body>
+</html>
