@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktiv HTML Side</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 8px 16px rgba(52, 152, 219, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(52, 152, 219, 0.7);
+        }
+
+        .animation-box {
+            width: 200px;
+            height: 200px;
+            background-color: #e74c3c;
+            border-radius: 15px;
+            margin-top: 40px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Velkommen til den interaktive siden!</h1>
+    <p>Trykk på knappen for en magisk opplevelse.</p>
+    
+    <div class="button-container">
+        <button class="btn" onclick="changeText()">Trykk meg!</button>
+    </div>
+
+    <div class="animation-box"></div>
+
+    <script>
+        function changeText() {
+            const p = document.querySelector('p');
+            p.textContent = "Du trykket på knappen! 🎉";
+            p.style.fontSize = '2em';
+            p.style.color = '#f39c12';
+            p.style.animation = 'none'; // Stop the previous animation
+            p.offsetHeight; // Trigger reflow to restart animation
+            p.style.animation = 'fadeIn 1s ease-in-out'; // Restart animation
+        }
+    </script>
+</body>
+</html>
