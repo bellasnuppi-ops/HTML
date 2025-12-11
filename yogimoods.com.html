@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+   <meta charset="UTF-8">
+   <!-- Forteller nettleseren hvilken tegnsett vi bruker (ÆØÅ osv.)--->
+   <title>YogiMoods</title> 
+   <!-- title vises i fanen øverst i nettleseren -->
+
+   <style>
+   /* ------------------------------
+         GLOBAL STYLES
+  ------------------------------ */
+      body {  /*CSS*/
+            background: #ffe6f0;
+            margin: 0;
+            font-family: "Calibri", sans-serif;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-in-out; }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            letter-spacing: 0.5px; }
+
+        img {
+            border-radius: 10px;
+            animation: fadeUp 1s ease-in-out; }
+       /* ------------------------------
+           NAVIGASJONSMENY
+      ------------------------------ */
+        nav {
+            background: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ffb6c9; }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            transition: color 0.3s ease; }
+
+        nav a:hover {
+            color: #d64a7a; }
+
+         /* ------------------------------
+           SEKSJONER
+        ------------------------------ */
+        section {
+            width: 80%;
+            max-width: 900px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeUp 1s ease-in-out; }
+
+        section img {
+            margin-top: 20px; }
+
+        section h2 {
+            margin-bottom: 10px;
+            color: #d64a7a; }
+
+        /* Liste-innhold */
+        section ol, section ul {
+            display: inline-block;
+            text-align: left;
+            padding-left: 20px; }
+
+       /* ------------------------------
+           HEADER
+        ------------------------------ */
+         header {
+            background: linear-gradient(135deg, #ffc5d8, #ffe6f0);
+            padding: 60px 20px;
+            margin-bottom: 30px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            animation: fadeDown 1s ease; }
+
+         header img {
+            margin-top: 10px;
+            animation: fadeIn 1.5s ease-in-out; }
+       /* ------------------------------
+           ANIMATIONS
+        ------------------------------ */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; } }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); } }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 600px) {
+           .form-row { flex-direction: column; }
+            section { width: 90%; padding: 20px; } }
+
+       /* --------------------------
+           CSS for Book Now-skjema 
+         --------------------------*/
+     .booking-form { 
+        background: #fff; 
+        padding: 30px; 
+        border-radius: 15px; 
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        max-width: 500px; 
+        margin: 30px auto; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 20px; }
+
+     .form-row { display: flex; gap: 20px; flex-wrap: wrap; }
+     .form-group { display: flex; flex-direction: column; flex: 1; }
+     .form-group input, .form-group textarea { padding: 12px; border-radius: 10px; border: 1px solid #ccc; }
+     .booking-form button { padding: 15px; background-color: #d64a7a; color: white; border-radius: 10px; cursor: pointer; }
+     .booking-form button:hover { background-color: #dcb0c4; }
+    
+    </style>
+</head>
+  <body>
+
+     <!---------------------
+        NAVIGASJONSMENY
+      ---------------------->
+ <nav>
+   <!--
+    <a> er lenker. href="" er adressen vi går til.
+        Her bruker vi interne lenker til ulike deler av side. -->
+    <a href="#About">● About me </a>
+    <a href="#Tips">● Tips and Tricks </a>
+    <a href="#Livestreams">● Livestreams </a>
+    <a href="#Book">● Book now </a> 
+ </nav>  
+
+     <!--------------
+      HEADER/TOPPTEKST 
+      --------------->
+<header>
+   <h1>Welcome to YogiMoods</h1>
+    <img src="yogimoods.png" width="350" alt="YogiMoods logo">
+    <h2>Lets light your mood up with yoga!</h2>
+</header>  <!--Stenger så alt ikke er en header-->
+ 
+      <!-----------------
+         HOVEDINNHOLD
+      ------------------>
+<main>
+    <!--Seksjon 1: Om meg -->
+ <section id="About">
+    <!-- <h1> er en underoverskrift. 
+      <h1> er størst, så kommer h2, h3 osc. -->
+    <h2>About me</h2>
+
+    <!---Avsnitt med tekst-->
+    <p> Hi! My name is Amalie, and I am a certified yogateacher. </p>
+    <p> My goal is to help you find ease in a stressfull day, no matter your mood of the day!</p>
+    <!---Bilde-->
+    <!--
+       <img> viser et bilde.
+       scr = filnavn eller "adresse" til bildet.
+       alt = alternativ tekst(vises for skjermleser eller hvis bildet ikke lastes).
+       -->
+     <img src="images.jpg" width="400" alt="About me">
+ </section>
+
+        
+    <!-- Seksjon 2: Lister-->
+ <section id="Tips">
+      <h2>Tips and Tricks</h2>
+        <p> 3 Simple Yoga Tips You Can Do Anytime, Anywhere </p>
+      
+        <h3> Quick Calming Breathwork </h3>
+      <!--
+        <ol> = ordered list (punktliste)
+        <li> = list item (listepunkt)-->
+      <ol>
+        <li> Try box breathing (4–4–4–4) to reset your focus. </li>
+        <li> Use deep belly breathing to relax your nervous system. </li>
+        <li> Sit tall, inhale slowly for four counts, pause, exhale for four.</li>
+      </ol>
+
+        <img src="breath.webp" width="300" alt="YogiMoods logo">
+
+        <h3> Simple Yoga Poses You Can Do Anywhere </h3>
+      <!--
+        <ol> = ordered list (punktliste)
+        <li> = list item (listepunkt)-->
+      <ol>
+        <li> Cat–Cow stretch at your desk. </li>
+        <li> Forward Fold to release tension from your back. </li>
+        <li> Seated Twist to improve mobility and posture.</li>
+      </ol>
+
+         <img src="pose1.png" width="300" alt="YogiMoods logo">
+
+        <h3> Micro-Routines for Busy Days </h3>
+      <!--
+        <ol> = ordered list (punktliste)
+        <li> = list item (listepunkt)-->
+      <ol>
+        <li> Morning: 1-minute spine stretch + 3 deep breaths. </li>
+        <li> Midday: slow shoulder rolls + 30 seconds of movement. </li>
+        <li> Evening: gentle forward fold to calm your mind for sleep. </li>
+      </ol>
+
+         <img src="stretch.jpg" width="300" alt="YogiMoods logo">
+    </section>
+    
+    <!-- Seksjon 3: Lister-->
+    <section id="Livestreams">
+      <h2>Livestreams</h2>
+        <p> (The calendar will be updated each sunday) </p>
+
+      <h3> Week 1</h3>
+      <!--
+        <ul> = unordered list (punktliste)
+        <li> = list item (listepunkt)-->
+      <ul>
+        <li> Monday: 0830-0930 CET </li>
+        <li> Wednesday: 1130-1230 CET </li>
+        <li> Friday: 1430-1530 CET</li>
+        <li> Sunday: 1930-2030 CET </li>
+      </ul>
+
+      <h3> Week 2 </h3>
+      <!--
+        <ol> = ordered list( nummerert liste)
+          -->
+      <ul>
+         <li> Tuesday: 1730-1830 CET</li>
+         <li> Thursday: 1930-2030 CET</li>
+         <li> Saturday: 1000-1100 CET</li>
+      </ul>
+
+      <img src="calendar.jpg" width="200" alt="YogiMoods logo">
+    
+    </section>
+
+    <!-- Seksjon 4: Enkel tekst-->
+     <section id="Book">
+      <h2> Book your spot now! </h2>
+
+       <form id="bookingForm" class="booking-form" action="#" method="post">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="firstName">Fornavn <span>(påkrevd)</span></label>
+      <input type="text" id="firstName" name="firstName" placeholder="Fornavn" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Etternavn <span>(påkrevd)</span></label>
+      <input type="text" id="lastName" name="lastName" placeholder="Etternavn" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">E-mail <span>(påkrevd)</span></label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  </div>
+
+  <div class="form-group">
+    <label for="phone">Telefon <span>(påkrevd)</span></label>
+    <input type="tel" id="phone" name="phone" placeholder="+47 123 45 678" required>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Comments / Notes</label>
+    <textarea id="message" name="message" rows="3" placeholder="Any questions or notes"></textarea>
+  </div>
+
+  <button type="submit">Send</button>
+</form>
+
+    <h2>Contact us</h2>
+    <h4> Email: yogimoodscontact@gmail.com </h4>
+    <h4> Mobile: +4700001111 </h4>
+    </section>
+
+</main>
+</body>
+</html>
